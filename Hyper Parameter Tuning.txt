@@ -1,0 +1,64 @@
+----------------------------------------------------------------------------------------------------
+XGBClassifier
+Classification Report
+              precision    recall  f1-score   support
+         0.0       0.97      1.00      0.98     21742
+         1.0       0.96      0.58      0.72       667
+         2.0       0.96      0.83      0.89      1737
+         3.0       0.92      0.48      0.63       192
+         4.0       0.99      0.94      0.96      1929
+    accuracy                           0.97     26267
+   macro avg       0.96      0.77      0.84     26267
+weighted avg       0.97      0.97      0.97     26267
+Best Model Found:
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+              colsample_bynode=1, colsample_bytree=1, gamma=0, gpu_id=0,
+              grow_policy='depthwise', importance_type='gain',
+              interaction_constraints='', learning_rate=0.01, max_delta_step=0,
+              max_depth=10, min_child_weight=1, missing=nan,
+              monotone_constraints='()', n_estimators=100, n_jobs=16,
+              num_parallel_tree=1, objective='multi:softprob', random_state=42,
+              reg_alpha=0, reg_lambda=1, sampling_method='gradient_based',
+              scale_pos_weight=None, subsample=0.5, tree_method='gpu_hist',
+              use_label_encoder=False, validate_parameters=1, verbosity=None)
+Best Parameters:
+{'grow_policy': 'depthwise', 'learning_rate': 0.01, 'max_depth': 10, 'subsample': 0.5}
+Time Taken 32165.665260076523 seconds for XGBClassifier GridSearchCV
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+KNeighborsClassifier
+Classification Report
+              precision    recall  f1-score   support
+         0.0       0.98      0.99      0.99     21742
+         1.0       0.91      0.69      0.78       667
+         2.0       0.93      0.92      0.93      1737
+         3.0       0.86      0.68      0.76       192
+         4.0       0.99      0.97      0.98      1929
+    accuracy                           0.98     26267
+   macro avg       0.93      0.85      0.89     26267
+weighted avg       0.98      0.98      0.98     26267
+Best Model Found:
+KNeighborsClassifier(n_jobs=-1, n_neighbors=4, weights='distance')
+Best Parameters:
+{'n_neighbors': 4, 'weights': 'distance'}
+Time Taken 90.08362817764282 seconds for KNeighborsClassifier GridSearchCV
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+RandomForestClassifier
+Classification Report
+              precision    recall  f1-score   support
+         0.0       0.97      1.00      0.99     21742
+         1.0       0.97      0.62      0.75       667
+         2.0       0.97      0.90      0.93      1737
+         3.0       0.96      0.56      0.70       192
+         4.0       0.99      0.95      0.97      1929
+    accuracy                           0.97     26267
+   macro avg       0.97      0.80      0.87     26267
+weighted avg       0.97      0.97      0.97     26267
+Best Model Found:
+RandomForestClassifier(n_estimators=600, n_jobs=-1, random_state=42)
+Best Parameters:
+{'max_depth': None, 'max_features': 'auto', 'n_estimators': 600}
+Time taken 1033.6322102546692 seconds for RandomForestClassifier GridSearchCV
+----------------------------------------------------------------------------------------------------
+Total time taken for hyper parameter tuning: 33289.381098508835 seconds.
